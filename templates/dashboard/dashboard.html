@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="container mt-5">
+     <div class="p-5 mb-4 bg-light rounded-3">
+         <div class="container-fluid py-5">
+            {% if request.user.is_customer %}
+             <h1 class="display-5 fw-bold" >Customer Dashboard</h1>
+            {% elif request.user.is_engineer %}
+             <h1 class="display-5 fw-bold" >Engineer Dashboard</h1>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
